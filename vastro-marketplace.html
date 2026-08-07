@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vastro Marketplace | Developer Tools Showcase</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <style>
+    :root {
+      --bg-color: #0d1117;
+      --card-bg: #161b22;
+      --accent-color: #58a6ff;
+      --green-glow: #3fb950;
+      --text-main: #c9d1d9;
+      --text-muted: #8b949e;
+      --border-color: #30363d;
+      --font-mono: 'Fira Code', 'Courier New', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border-color);
+      margin-bottom: 3rem;
+    }
+
+    header h1 {
+      font-family: var(--font-mono);
+      color: var(--accent-color);
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      color: var(--text-muted);
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      color: var(--accent-color);
+      text-decoration: none;
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+    }
+
+    .back-btn:hover {
+      text-decoration: underline;
+    }
+
+    .catalog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .tool-card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: border-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .tool-card:hover {
+      border-color: var(--accent-color);
+      transform: translateY(-4px);
+    }
+
+    .tool-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .tool-header h3 {
+      color: #fff;
+      font-size: 1.2rem;
+    }
+
+    .status-tag {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--green-glow);
+      background: rgba(63, 185, 80, 0.1);
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+    }
+
+    .tool-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .tech-tags {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .tech-tags span {
+      font-family: var(--font-mono);
+      background: rgba(88, 166, 255, 0.1);
+      color: var(--accent-color);
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.8rem;
+    }
+
+    .action-btn {
+      display: block;
+      text-align: center;
+      background-color: transparent;
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      padding: 0.6rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+      transition: all 0.2s ease;
+    }
+
+    .action-btn:hover {
+      border-color: var(--accent-color);
+      color: var(--accent-color);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <a href="index.html" class="back-btn">&larr; Back to Portfolio</a>
+
+    <header>
+      <h1>VASTRO MARKETPLACE</h1>
+      <p>A catalog of custom developer tools, local software utilities, and open-source packages.</p>
+    </header>
+
+    <div class="catalog-grid">
+
+      <!-- Tool Item 1 -->
+      <div class="tool-card">
+        <div>
+          <div class="tool-header">
+            <h3>Terminal Customizer</h3>
+            <span class="status-tag">Active</span>
+          </div>
+          <p>CLI config generator for customized shell environments, prompt tweaks, and color themes.</p>
+          <div class="tech-tags">
+            <span>Bash</span>
+            <span>Linux</span>
+            <span>CSS</span>
+          </div>
+        </div>
+        <a href="#" class="action-btn">View Tool Details</a>
+      </div>
+
+      <!-- Tool Item 2 -->
+      <div class="tool-card">
+        <div>
+          <div class="tool-header">
+            <h3>Forensic Memory Analyzer</h3>
+            <span class="status-tag">Active</span>
+          </div>
+          <p>Automated script suite for parsing live RAM dumps and extracting system process artifacts.</p>
+          <div class="tech-tags">
+            <span>Python</span>
+            <span>Security</span>
+            <span>CLI</span>
+          </div>
+        </div>
+        <a href="#" class="action-btn">View Tool Details</a>
+      </div>
+
+      <!-- Tool Item 3 -->
+      <div class="tool-card">
+        <div>
+          <div class="tool-header">
+            <h3>Manga & Anime Manager</h3>
+            <span class="status-tag">In Dev</span>
+          </div>
+          <p>Command-line interface manager for organizing and tracking personal media collections.</p>
+          <div class="tech-tags">
+            <span>Shell Script</span>
+            <span>API</span>
+            <span>Linux</span>
+          </div>
+        </div>
+        <a href="#" class="action-btn">View Tool Details</a>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

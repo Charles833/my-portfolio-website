@@ -1,0 +1,127 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0d1117;
+  color: #c9d1d9;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 0;
+  border-bottom: 1px solid #30363d;
+}
+.hero h1 {
+  font-family: "Fira Code", "Courier New", monospace;
+  color: #58a6ff;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.hero .subtitle {
+  color: #8b949e;
+  font-size: 1.1rem;
+}
+
+.projects-section {
+  padding: 3rem 0;
+}
+.projects-section h2 {
+  font-family: "Fira Code", "Courier New", monospace;
+  color: #c9d1d9;
+  margin-bottom: 2rem;
+  border-left: 4px solid #58a6ff;
+  padding-left: 0.5rem;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-card {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+.project-card:hover {
+  transform: translateY(-4px);
+  border-color: #58a6ff;
+}
+.project-card .card-badge {
+  font-family: "Fira Code", "Courier New", monospace;
+  font-size: 0.75rem;
+  color: #3fb950;
+  margin-bottom: 0.5rem;
+}
+.project-card h3 {
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+.project-card p {
+  color: #8b949e;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+.project-card .tech-stack {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+.project-card .tech-stack span {
+  font-family: "Fira Code", "Courier New", monospace;
+  background: rgba(88, 166, 255, 0.1);
+  color: #58a6ff;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+.project-card .card-links {
+  display: flex;
+  gap: 1rem;
+}
+.project-card .card-links .link-btn {
+  color: #c9d1d9;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-family: "Fira Code", "Courier New", monospace;
+}
+.project-card .card-links .link-btn:hover {
+  color: #58a6ff;
+}
+
+.contact-section {
+  text-align: center;
+  padding: 4rem 0;
+  border-top: 1px solid #30363d;
+}
+.contact-section .email-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #58a6ff;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  font-family: "Fira Code", "Courier New", monospace;
+}
+.contact-section .email-btn:hover {
+  opacity: 0.9;
+}/*# sourceMappingURL=main.css.map */

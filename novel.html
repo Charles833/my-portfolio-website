@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nova Harbor</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #07111f;
+        --panel: rgba(255,255,255,0.08);
+        --text: #f3f7ff;
+        --accent: #6ee7f9;
+        --accent-2: #a78bfa;
+      }
+
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: Inter, "Segoe UI", Roboto, sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at top left, rgba(110,231,249,0.25), transparent 24%),
+          linear-gradient(135deg, var(--bg), #16253d 70%, #0d1629);
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 24px;
+      }
+
+      main {
+        width: min(1100px, 100%);
+        display: grid;
+        gap: 24px;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 24px;
+        padding: 28px;
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 24px;
+        background: var(--panel);
+        backdrop-filter: blur(18px);
+        box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+      }
+
+      .eyebrow {
+        letter-spacing: 0.34em;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        color: var(--accent);
+        margin-bottom: 10px;
+      }
+
+      h1 {
+        font-size: clamp(2.2rem, 4vw, 3.4rem);
+        margin: 0 0 12px;
+      }
+
+      p { line-height: 1.7; opacity: 0.9; }
+
+      .cta-row {
+        display: flex;
+        gap: 12px;
+        margin-top: 24px;
+        flex-wrap: wrap;
+      }
+
+      button {
+        border: 0;
+        border-radius: 999px;
+        padding: 12px 18px;
+        font-size: 1rem;
+        cursor: pointer;
+        color: #050725;
+        background: linear-gradient(90deg, var(--accent), var(--accent-2));
+        box-shadow: 0 12px 30px rgba(110,231,249,0.2);
+      }
+
+      .story-card {
+        background: rgba(5,9,17,0.55);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 20px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .story-card h2 {
+        margin-top: 0;
+        font-size: 1.2rem;
+      }
+
+      .quote {
+        font-size: 1.05rem;
+        font-style: italic;
+        color: #dceeff;
+      }
+
+      @media (max-width: 768px) {
+        .hero { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="hero">
+        <div>
+          <div class="eyebrow">A living story</div>
+          <h1>Nova Harbor</h1>
+          <p>
+            Welcome to a web experience that feels like a novel in motion. Each section is a new chapter,
+            and every interaction helps the world awaken.
+          </p>
+          <div class="cta-row">
+            <button id="nextChapter">Open the next chapter</button>
+          </div>
+        </div>
+        <div class="story-card">
+          <div>
+            <h2>Current chapter</h2>
+            <p id="chapterText" class="quote">
+              The sea remembers every name that was brave enough to be spoken aloud.
+            </p>
+          </div>
+          <p id="chapterMeta">Chapter 01 · The Lantern at Dusk</p>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const chapters = [
+        {
+          title: "Chapter 01 · The Lantern at Dusk",
+          text: "The sea remembers every name that was brave enough to be spoken aloud."
+        },
+        {
+          title: "Chapter 02 · The Clockwork Tide",
+          text: "Some doors only open when the city is asleep and the stars have learned your secret."
+        },
+        {
+          title: "Chapter 03 · Glass Gardens",
+          text: "In the gardens of glass, every bloom held a memory that had not yet decided to bloom back."
+        }
+      ];
+
+      let index = 0;
+      const button = document.getElementById("nextChapter");
+      const text = document.getElementById("chapterText");
+      const meta = document.getElementById("chapterMeta");
+
+      button.addEventListener("click", () => {
+        index = (index + 1) % chapters.length;
+        text.textContent = chapters[index].text;
+        meta.textContent = chapters[index].title;
+      });
+    </script>
+  </body>
+</html>
